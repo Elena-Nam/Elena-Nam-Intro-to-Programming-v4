@@ -1,6 +1,8 @@
 /* a link to a font for h1*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sevillana&display=swap');
 
+/*DESKTOP FIRST*/
+
 * { 
   line-height: 1.5;
   
@@ -10,7 +12,7 @@ body {
     background-color: rgb(222, 195, 224);
     color: rgb(0, 0, 0); 
     font-family: "Times New Roman", serif;
-    font-size: 1.25em;  
+    font-size: 1.125rem;  
     p.normal {
         font-weight: normal;
       } 
@@ -20,7 +22,7 @@ body {
 h1 {
   color: rgb(159, 77, 137); 
   font-family: "Dancing Script", cursive;
-  font-size: 60px;  
+  font-size: 3rem;  
   font-weight: 900; 
   margin: 10px;
   margin-left: 30px;
@@ -29,10 +31,28 @@ h1 {
 
 h2 {
   color: rgb(126, 92, 129); 
-  size: 25px;
+  font-size: 1.5rem;
   font-weight: bold; 
-  margin-left: 40px;
+  margin-left: 10px;
 }
+
+h3 {
+  color: rgb(126, 92, 129); 
+  font-size: 1.25rem;
+  font-weight: bold;
+ }
+
+.read-more {
+  color: rgb(159, 77, 137); 
+  font-weight: 600;
+  text-decoration: none;
+  }
+
+.read-more:hover {
+  color: rgb(255, 105, 180);
+  text-decoration: underline;
+}
+
 
 p {
 letter-spacing: 1.2px;
@@ -46,10 +66,13 @@ letter-spacing: 1.2px;
     width: 100%;
     margin: 0 auto;   
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    
   }
 
 .container-nav a {
-    float: right;
+    float: left;
     color: rgb(0, 0, 0);
     letter-spacing: 1px;
     text-align: center;
@@ -75,6 +98,11 @@ letter-spacing: 1.2px;
     justify-content: space-between;
 }
 
+/* Hide the link that should open and close the topnav on small screens */
+.container-nav .icon {
+  display: none;
+}
+
 /* the sticky position doesn't work again*/
 header {
   position: sticky;
@@ -84,7 +112,7 @@ header {
 header .logo {
   float: left;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1em;
   text-transform: uppercase;
   color: rgb(255, 105, 180);
   text-decoration: none;
@@ -96,12 +124,42 @@ header .logo {
 .ticker {
   color: rgb(159, 77, 137);
   font-family: Lucida Handwriting;
-  font-size: 25px;
-  width: 50%;
-  height: 40px; 
+  font-size: 1.25rem;
+  width: 70%;
+  height: 10%; 
   padding: 10px;
-  margin-bottom: 30px; 
+  margin-bottom: 20px;
+  margin-left: 200px; 
 }
+
+
+/* main content*/
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+content {
+  width: 75%;
+}
+
+/*projects section*/
+
+aside {
+  width: 25%;
+  display: flex;
+}
+
+.sidebar-widget {
+  border: 5px solid rgb(159, 77, 137); 
+  border-radius: 5px; 
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 
 /*experience section*/
 
@@ -110,16 +168,16 @@ header .logo {
   display: flex;
   flex-direction: column;
   flex: wrap;
-  :hover {
-    font-size: 20px; /* Change the size of the font on hover */
+  border-radius: 5px;  
 }
-}
+
 #experience button {
  flex: 0 0 70px;
- width: 500px;
- padding: 20px;
- background-color: rgb(185, 159, 187);
- font-size: 18px;
+ width: 70%;
+ max-width: 600px;
+ padding: 0 15px;
+ background-color: rgb(200, 154, 203);
+ font-size: 1rem; 
  letter-spacing: 1px;
  border: none;
  border-radius: 5px;
@@ -127,36 +185,26 @@ header .logo {
  text-align: left;
  position: relative;
  gap: 20px;
-
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
 }
 
 #experience .card {
-  background-color: rgb(200,154,203);
+  border: 7px solid rgb(200, 154, 203);
   box-sizing: border-box;
-  width: 500px;
+  width: 155%;
+  max-width: 505px;
   flex: 0 0 200px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 0px;
-  margin-left: -30px; 
-}
-
-
-section {
-    margin-left: 40px;
-  }
-  
-section div {
-  border-radius: 5px;
-  padding: 0 20px;
-  text-align: left;
-  margin-left: 10px;
-  margin-bottom: -10px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(185, 159, 187);
-  width: 45%;
+  margin-left: 0px; 
+  padding: 0 15px;
+  font-size: 1rem; 
 }
 
 /* connect section*/
+
 #connect ul {
 display: flex;
 flex-direction: row;
@@ -168,10 +216,22 @@ a:hover {
 }
 
 /* leave a message section */
+
+section .container-m {
+  border-radius: 5px;
+  padding: 0 20px;
+  text-align: left;
+  margin-left: 10px;
+  margin-bottom: -10px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(185, 159, 187);
+  width: 45%;
+}
 #leave_a_message {
   border-radius: 5px;
   padding: 20px;
-  width: 80%;
+  width: 100%;
+  max-width: 1200px;
   margin-bottom: 30px;
   margin-left: 30px;
   
@@ -179,6 +239,7 @@ a:hover {
 
 input[type=text], select, textarea {
   width: 100%; 
+  max-width: 700px;
   padding:12px; 
   border: 1px solid rgb(222, 195, 224); 
   border-radius: 4px; 
@@ -193,12 +254,12 @@ input[type=submit] {
   background-color: rgb(159, 77, 137);
   color: rgb(0, 0, 0);
   font-family: "Times New Roman", serif;
-  font-size: 17px;
+  font-size: .90rem;
   font-weight: 700;
   letter-spacing: 1px;
   padding: 10px;
   border: none;
-  border-radius: 10px;
+  border-radius: 50%;
   margin-bottom: 10px;
   cursor: pointer;
 }
@@ -214,7 +275,7 @@ input[type=submit]:hover {
   border: none;
   background-color: rgb(159, 77, 137);
   padding: 5px 10px;
-  font-size: 15px;
+  font-size: .75rem;
   letter-spacing: 2px;
   display: inline-block;
   position: relative;

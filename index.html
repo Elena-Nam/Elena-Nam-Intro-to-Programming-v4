@@ -6,7 +6,9 @@
     <meta name="author"content="Elena Nam">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
     <script src = "js/index.js"></script>
     <title> Elena Nam portfolio </title>
 </head>
@@ -16,14 +18,20 @@
         <header>
             <div class ="container-nav">
                 <a href="#" class="logo"> Logo </a>
-                <nav>
-                <a href="#leave_a_message"><strong> Leave a Message</strong></a>
-                <a href="#connect"><strong> Connect </strong></a>
-                <a href="#projects"><strong> Projects </strong></a>
-                <a href="#skills"><strong> Skills </strong></a>
+
+                <nav id="myNav">                          
+                <a class="active" href="#home"><strong> Home </strong></a>
+                <a href="#about"><strong> About </strong></a> 
                 <a href="#experience"><strong> Experience </strong></a>
-                <a href="#about"><strong> About </strong></a>
-                <a class="active" href="#home"><strong> Home </strong></a> 
+                <a href="#skills"><strong> Skills </strong></a>
+                <a href="#projects"><strong> Projects </strong></a>
+                <a href="#connect"><strong> Connect </strong></a>
+                <a href="#leave_a_message"><strong> Leave a Message</strong></a>
+                
+                <!--to show a hamburger menu (bars) on small screens -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    </a>
                 </nav>
             </div> 
         </header>
@@ -37,73 +45,84 @@
         </div>
 
         <div class ="container">
+            <div class ="content">
             <section id ="about">
                 <h2><em> About: </em></h2> 
                 <p> I am a teacher and learner. I am currently developing my skills on web development.</p>
+                <p></p>
+                <a href="#" class="read-more">continue reading</a>
             </section>
-        </div>
-
-        <h2><em> Experience: </em></h2>
-            <section id ="experience">
-                <div class ="container">
-                <button onclick="myFunction1()">Associate @ TJX &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 3/2024 - present </button>
-                    <div id="tjx">
+    
+            <h2><em> Experience: </em></h2>
+            <section id = "experience">
+                
+                <button onclick = "myFunction1()">
+                    
+                    <p> Associate @ TJX </p>
+                    <p class = "date"> 3/2024 - present</p> 
+                </button>
+                <div id="tjx">
                     <div class = "card">
                     <p> "TJX", USA </p>
                     <p> Processing and preparing merchandise for the sales floor following company procedures and standards</p>
                     </div>
-                    </div>
-                <button onclick="myFunction2()"> Teacher @ Miru - Mir &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  2/2023 - 1/2024 </button>
-                    <div id = "miru-mir">
+                </div>
+                <button onclick = "myFunction2()"> 
+                    <p> Teacher @ Miru - Mir </p> 
+                    <p class = "date"> 2/2023 - 1/2024 </p>
+                </button>
+                <div id = "miru-mir">
                     <div class = "card">
                     <p> "Miru Mir", Uzbekistan </p>
                     <p> Utilizing a variety of instructional strategies, resources, and technologies to enhance student understanding and engagement in English.</p>
                     </div>
-                    </div>
-                <button onclick="myFunction3()"> Teacher @ Alter Ego &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 9/2021 - 1/2023 </button>
-                    <div id = "alter-ego">
+                </div>
+                <button onclick = "myFunction3()"> 
+                    <p> Teacher @ Alter Ego </p> 
+                    <p class = "date"> 9/2021 - 1/2023 </p>
+                </button>
+                <div id = "alter-ego">
                     <div class = "card">
                     <p>"Alter Ego", Uzbekistan </p>
                     <p> Assessing student progress regularly through formative and summative assessments, providing timely and constructive feedback to support growth.</p>
                     </div>
-                    </div>   
-                <button onclick="myFunction4()"> Employee @ Hansung &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  2/2016 - 11/2020 </button>
-                    <div id = "hansung">
+                </div> 
+                <button onclick="myFunction4()"> 
+                    <p> Employee @ Hansung </p>
+                    <p class = "date"> 2/2016 - 11/2020 </p>
+                </button>
+                <div id = "hansung">
                     <div class = "card">
                     <p>"Hansung", South Korea </p>
                     <p> Performing inspections on product forms.</p>
                     </div>
-                    </div> 
-                <button onclick="myFunction5()"> Manager @  Variant - Optima &nbsp &nbsp &nbsp &nbsp  4/2012 - 1/2016</button>
-                    <div id = "variant-optima">
+                </div>
+                <button onclick = "myFunction5()"> 
+                    <p> Manager @  Variant - Optima </p>  
+                    <p class = "date"> 4/2012 - 1/2016 </p>
+                </button>
+                <div id = "variant-optima">
                     <div class = "card">
                     <p>"Variant - Optima", Uzbekistan </p>
                     <p> Managing projects, including planning, coordinating with teams, and monitoring profit. Maintaining project documentation and communicate updates effectively.</p>
                     </div>
-                    </div> 
-                <button onclick="myFunction6()"> Teacher @ School 33 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   8/2008 - 4/2012</button>
-                    <div id = "school">
+                </div>
+                <button onclick = "myFunction6()"> 
+                    <p> Teacher @ School 33 </p>   
+                    <p class = "date"> 8/2008 - 4/2012 </p>
+                </button>
+                <div id = "school">
                     <div class = "card">
                     <p> Secondary school 33, Uzbekistan </p>
                     <p> Developing and implementing lesson plans that align with the school's curriculum and educational standards.</p>
                     </div>
-                    </div> 
                 </div>
             </section>
-
-        <div class ="container">
+    
             <section id ="skills">
                 <h2><em> Skills </em></h2>
             </section>
-        </div>
-
-        <div class ="container">
-            <section id ="projects">
-                <h2><em> Projects </em></h2>
-            </section>
-        </div>
-
-        <div class ="container">
+              
             <section id ="connect">
                 <h2><em> Connect: </em></h2>
                 <ul>
@@ -117,11 +136,10 @@
                 </li>
                 </ul>
             </section>
-        </div>
-.
+        
             <section id ="leave_a_message">
                 <h2><em> Leave a Message </em></h2>
-                <div class ="container">
+                <div class ="container-m">
                     <form action="action_page.php">
                     <label for="name"> Name </label>
                     <input type="text" id="name" name="name" placeholder="Your name..">
@@ -136,7 +154,22 @@
                     </form>
                 </div>
             </section>
-        
+        </div>
+            <aside class="sidebar">
+                <section id ="projects">
+                    <h2><em> Projects </em></h2>
+                    <div class="sidebar-widget">
+                    <h3 class="widget-title"> My new project </h3>
+                    <p></p>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title"> All projects </h3>
+                        <p></p>
+                    </div>
+                </section>
+            </aside>
+
+        </div>
 
     <button class= "btn"><strong> Top </strong></button>
     
