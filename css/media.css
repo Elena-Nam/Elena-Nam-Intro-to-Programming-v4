@@ -9,8 +9,11 @@
         font-size: 2.5rem;
     }
 
+
+
     .container-nav {
          flex-direction: column;
+         
          
     }
         
@@ -30,7 +33,7 @@
       display: block;
       text-align: left;
     }
-  
+    
    
     .ticker {
         width: 90%;
@@ -40,6 +43,7 @@
 
     .container {
         flex-direction: column;
+        
     }
 
     #experience button {
@@ -49,15 +53,28 @@
     #experience .card {
         width: 100%;
         font-size: 1.2rem;
+        border: 4px solid rgb(200, 154, 203);
     }
+
+    
+    #skills ul {
+        flex-direction: column;
+        gap: .5em; 
+        width: 40%;
+        
+    }
+
 
     aside {
         width: 100%; 
         justify-content: center;
+        margin-left: 0;
+        
     }
 
     section .container-m {
         width: 70%;
+       
     }
 
     #connect ul {
@@ -67,7 +84,14 @@
       
     #leave_a_message {
         margin: 0;
+        border-bottom: rgb(126, 92, 129) 2px solid;
+        padding-bottom: 2em;
     }
+
+    #topBtn {
+        transform: translateX(-220%);
+    }   
+
 }
 
 
@@ -100,6 +124,11 @@
     
     }
 
+/* width doesn't change for desktop and tablet 
+    #skills ul {
+        width: 40%;  
+    }
+*/
     section .container-m {
         width: 90%;
     }

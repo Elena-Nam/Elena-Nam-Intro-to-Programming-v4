@@ -25,7 +25,7 @@ h1 {
   font-size: 3rem;  
   font-weight: 900; 
   margin: 10px;
-  margin-left: 30px;
+  margin-left: 30px !important;
   margin-bottom: -20px;
 }
 
@@ -64,7 +64,7 @@ letter-spacing: 1.2px;
     background-color: rgb(159, 77, 137);
     overflow: hidden;
     width: 100%;
-    margin: 0 auto;   
+    margin: 0 auto;  
     top: 0;
     display: flex;
     justify-content: space-between;
@@ -103,10 +103,11 @@ letter-spacing: 1.2px;
   display: none;
 }
 
-/* the sticky position doesn't work again*/
 header {
   position: sticky;
+  top: 0;
 }
+
 
 /* logo */
 header .logo {
@@ -117,6 +118,13 @@ header .logo {
   color: rgb(255, 105, 180);
   text-decoration: none;
   letter-spacing: 2px;
+ 
+}
+
+img{
+  width: 50px;
+  height:auto;
+
 }
 
 
@@ -133,7 +141,8 @@ header .logo {
 }
 
 
-/* main content*/
+/* main content */
+
 .container {
   width: 90%;
   max-width: 900px;
@@ -146,22 +155,35 @@ content {
   width: 75%;
 }
 
+#about {
+  border-bottom: rgb(126, 92, 129) 2px solid;
+  padding: 1em;
+}
+
+
 /*projects section*/
 
 aside {
   width: 25%;
+  min-width: 250px;
   display: flex;
+  margin-left: 2em;
 }
 
 .sidebar-widget {
-  border: 5px solid rgb(159, 77, 137); 
+  border: 7px solid rgb(159, 77, 137); 
   border-radius: 5px; 
-  margin-bottom: 10px;
+  margin-bottom: 1em;
   text-align: center;
 }
 
 
 /*experience section*/
+
+#experience {
+  border-bottom: rgb(126, 92, 129) 2px solid;
+  padding-bottom: 1em;
+}
 
 #experience div {
   background-color: rgb(222, 195, 224);
@@ -174,16 +196,14 @@ aside {
 #experience button {
  flex: 0 0 70px;
  width: 70%;
- max-width: 600px;
  padding: 0 15px;
  background-color: rgb(200, 154, 203);
  font-size: 1rem; 
  letter-spacing: 1px;
- border: none;
+ /*border: none;*/
  border-radius: 5px;
  margin-bottom: 10px;
  text-align: left;
- position: relative;
  gap: 20px;
  display: flex;
  flex-direction: row;
@@ -193,23 +213,46 @@ aside {
 #experience .card {
   border: 7px solid rgb(200, 154, 203);
   box-sizing: border-box;
-  width: 155%;
-  max-width: 505px;
+  width: 70%;
   flex: 0 0 200px;
   margin-bottom: 20px;
   margin-top: 0px;
   margin-left: 0px; 
   padding: 0 15px;
   font-size: 1rem; 
+ 
 }
 
-/* connect section*/
 
+/* skills section */
+
+#skills {
+  border-bottom: rgb(126, 92, 129) 2px solid;
+  padding-bottom: 1em;
+  
+}
+
+#skills ul {
+  display: flex;
+  flex-direction: row; 
+  list-style-type: none; 
+  gap: 5em;
+ 
+}
+
+
+/* connect section */
+
+#connect {
+  border-bottom: rgb(126, 92, 129) 2px solid;
+  padding-bottom: 1em;
+}
 #connect ul {
 display: flex;
 flex-direction: row;
 gap: 8em;
 list-style-type: none; 
+
 a:hover {
   color: rgb(255, 105, 180);
 }
@@ -228,7 +271,6 @@ section .container-m {
   width: 45%;
 }
 #leave_a_message {
-  border-radius: 5px;
   padding: 20px;
   width: 100%;
   max-width: 1200px;
@@ -240,7 +282,7 @@ section .container-m {
 input[type=text], select, textarea {
   width: 100%; 
   max-width: 700px;
-  padding:12px; 
+  padding: 12px; 
   border: 1px solid rgb(222, 195, 224); 
   border-radius: 4px; 
   box-sizing: border-box; 
@@ -269,32 +311,34 @@ input[type=submit]:hover {
   background-color: rgb(255, 105, 180); 
 }
 
-
 /* top button */
-.btn {
+#topBtn {
   border: none;
   background-color: rgb(159, 77, 137);
   padding: 5px 10px;
   font-size: .75rem;
   letter-spacing: 2px;
-  display: inline-block;
-  position: relative;
   left: 100%;
   transform: translateX(-190%);
   text-align: right;
   border-radius: 10px;
   margin: 30px;
+  display: none; 
+  position: fixed; 
+  bottom: .3em; 
+  cursor: pointer; 
 }
 
-.btn:hover { 
-  background: rgb(255, 105, 180); /* On mouse-over */
+#topBtn:hover { 
+  background: rgb(255, 105, 180); 
 }
 
 
-/*footer*/
+/* footer */
 footer {
     background-color: rgb(159, 77, 137);
     color: rgb(40,42,55);
-    font-size: 18px;
+    font-size: 1.15rem;
     text-align: center;   
+    margin-bottom: -20px;
 }

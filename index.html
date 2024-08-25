@@ -6,10 +6,9 @@
     <meta name="author"content="Elena Nam">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/media.css">
-    <script src = "js/index.js"></script>
+    
     <title> Elena Nam portfolio </title>
 </head>
 
@@ -17,7 +16,7 @@
     <main>
         <header>
             <div class ="container-nav">
-                <a href="#" class="logo"> Logo </a>
+               <a href="#" class="logo">Logo</a>
 
                 <nav id="myNav">                          
                 <a class="active" href="#home"><strong> Home </strong></a>
@@ -29,7 +28,7 @@
                 <a href="#leave_a_message"><strong> Leave a Message</strong></a>
                 
                 <!--to show a hamburger menu (bars) on small screens -->
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon" onclick="hamburger()">
                     <i class="fa fa-bars"></i>
                     </a>
                 </nav>
@@ -61,13 +60,13 @@
                     <p> Associate @ TJX </p>
                     <p class = "date"> 3/2024 - present</p> 
                 </button>
-                <div id="tjx">
+                <div id = "tjx">
                     <div class = "card">
                     <p> "TJX", USA </p>
                     <p> Processing and preparing merchandise for the sales floor following company procedures and standards</p>
                     </div>
                 </div>
-                <button onclick = "myFunction2()"> 
+                <button onclick = "myFunction2()">
                     <p> Teacher @ Miru - Mir </p> 
                     <p class = "date"> 2/2023 - 1/2024 </p>
                 </button>
@@ -87,7 +86,7 @@
                     <p> Assessing student progress regularly through formative and summative assessments, providing timely and constructive feedback to support growth.</p>
                     </div>
                 </div> 
-                <button onclick="myFunction4()"> 
+                <button onclick = "myFunction4()"> 
                     <p> Employee @ Hansung </p>
                     <p class = "date"> 2/2016 - 11/2020 </p>
                 </button>
@@ -120,7 +119,8 @@
             </section>
     
             <section id ="skills">
-                <h2><em> Skills </em></h2>
+                <h2><em> Skills: </em></h2>
+                <ul></ul>
             </section>
               
             <section id ="connect">
@@ -140,21 +140,29 @@
             <section id ="leave_a_message">
                 <h2><em> Leave a Message </em></h2>
                 <div class ="container-m">
-                    <form action="action_page.php">
+                    <!--<form action="action_page.php">-->
+                     <form action="leave_message">
                     <label for="name"> Name </label>
-                    <input type="text" id="name" name="name" placeholder="Your name..">
+                    <input type="text" id="name" name="UsersName" placeholder="Your name..">
 
                     <label for="email"> Email </label>
-                    <input type="text" id="email" name="email" placeholder="Your email address..">
+                    <input type="text" id="email" name="UsersEmail" placeholder="Your email address..">
 
                     <label for="message"> Message </label>
-                    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                    <textarea id="message" name="usersMessage" placeholder="Write something.." style="height:200px"></textarea>
 
                     <input type="submit" value="Submit">
                     </form>
                 </div>
             </section>
-        </div>
+
+            <section id ="messages">
+                <h2><em> Messages </em></h2>
+                <ul></ul>   
+            </section>
+
+        </div> <!-- closing div for the class = "content" -->
+
             <aside class="sidebar">
                 <section id ="projects">
                     <h2><em> Projects </em></h2>
@@ -163,19 +171,18 @@
                     <p></p>
                     </div>
                     <div class="sidebar-widget">
-                        <h3 class="widget-title"> All projects </h3>
-                        <p></p>
-                    </div>
+                    <h3 class="widget-title"> All projects </h3>
+                    <p></p>
+                    </div> 
                 </section>
             </aside>
 
-        </div>
+        </div> <!-- closing div for the class = "container" -->
 
-    <button class= "btn"><strong> Top </strong></button>
     
+    <button class = "btn" onclick="topFunction()" id="topBtn" title="Go to top"><strong> Top </strong></button> 
     </main>  
-
-    <footer> Copyright &copy; 2024 by Elena Nam </footer>
-
+    
+    <script src = "js/index.js"></script>
 </body>
 </html>
