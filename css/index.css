@@ -17,6 +17,7 @@ body {
         font-weight: normal;
       } 
       margin: 0 auto;    
+      
 }
 
 h1 {
@@ -46,13 +47,14 @@ h3 {
   color: rgb(159, 77, 137); 
   font-weight: 600;
   text-decoration: none;
+ 
   }
 
 .read-more:hover {
   color: rgb(255, 105, 180);
   text-decoration: underline;
 }
-
+#more {display: none;};
 
 p {
 letter-spacing: 1.2px;
@@ -121,32 +123,65 @@ header .logo {
  
 }
 
-img{
-  width: 50px;
-  height:auto;
-
-}
-
 
 /* ticker */
 .ticker {
   color: rgb(159, 77, 137);
   font-family: Lucida Handwriting;
   font-size: 1.25rem;
-  width: 70%;
+  width: 65%;
   height: 10%; 
   padding: 10px;
-  margin-bottom: 20px;
-  margin-left: 200px; 
+  margin-bottom: 5px;
+  margin-left: 260px; 
+
 }
 
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 1fr;
+}
+
+/* animation */
+
+.container-a {
+  position: relative;
+   width: 1fr;  
+   height: 100%; 
+   margin: 1em;
+   overflow: hidden; 
+   pointer-events: none;
+ }
+ 
+ .flower::before {
+   content: "";
+   position: absolute;
+   background: url(cosmos-transformed.png);
+   width: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   animation: move 5s linear 10 ;
+ } 
+ 
+ @keyframes move {
+   0% {
+     transform: translate(0) rotate(0deg);
+   }
+   100% {
+     transform: translate(300px) rotate(360deg);
+   }
+ }
+   
 
 /* main content */
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 3em;
+  margin-right: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -168,6 +203,7 @@ aside {
   min-width: 250px;
   display: flex;
   margin-left: 2em;
+  justify-content: center;
 }
 
 .sidebar-widget {
@@ -175,10 +211,11 @@ aside {
   border-radius: 5px; 
   margin-bottom: 1em;
   text-align: center;
+ 
 }
 
 
-/*experience section*/
+/* experience section */
 
 #experience {
   border-bottom: rgb(126, 92, 129) 2px solid;
@@ -200,7 +237,6 @@ aside {
  background-color: rgb(200, 154, 203);
  font-size: 1rem; 
  letter-spacing: 1px;
- /*border: none;*/
  border-radius: 5px;
  margin-bottom: 10px;
  text-align: left;
@@ -229,7 +265,6 @@ aside {
 #skills {
   border-bottom: rgb(126, 92, 129) 2px solid;
   padding-bottom: 1em;
-  
 }
 
 #skills ul {
@@ -237,8 +272,17 @@ aside {
   flex-direction: row; 
   list-style-type: none; 
   gap: 5em;
- 
+  border-radius: 5px;
 }
+
+#skills li {
+  width: 5em;
+  border-radius: 5px;
+  background-color: rgb(159, 77, 137); 
+  padding: .5em; 
+  text-align: center;
+}
+
 
 
 /* connect section */
@@ -247,6 +291,7 @@ aside {
   border-bottom: rgb(126, 92, 129) 2px solid;
   padding-bottom: 1em;
 }
+
 #connect ul {
 display: flex;
 flex-direction: row;
@@ -270,13 +315,13 @@ section .container-m {
   background-color: rgb(185, 159, 187);
   width: 45%;
 }
+
 #leave_a_message {
   padding: 20px;
   width: 100%;
   max-width: 1200px;
   margin-bottom: 30px;
   margin-left: 30px;
-  
 }
 
 input[type=text], select, textarea {
@@ -292,7 +337,7 @@ input[type=text], select, textarea {
 }
 
 /* submit button */
-input[type=submit] {
+ button[type=submit] {
   background-color: rgb(159, 77, 137);
   color: rgb(0, 0, 0);
   font-family: "Times New Roman", serif;
@@ -300,16 +345,49 @@ input[type=submit] {
   font-weight: 700;
   letter-spacing: 1px;
   padding: 10px;
-  border: none;
+  /*border: none;*/
   border-radius: 50%;
   margin-bottom: 10px;
   cursor: pointer;
+ 
 }
 
 /* When moving the mouse over the submit button,the background color changes pink */
-input[type=submit]:hover {
+button[type=submit]:hover {
   background-color: rgb(255, 105, 180); 
 }
+
+
+/* messages section */
+
+.message-text {
+  margin-right: 5em;
+}
+
+#messages ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* styles for edit, save and remove buttons */
+button[type=button]{
+  background-color: rgb(159, 77, 137); 
+  letter-spacing: 1px; 
+  border-radius: 5px; 
+  margin: 0 3em;
+  margin-bottom: 2em;
+  width: 5em;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the buttons,the background color changes pink */
+button[type=button]:hover {
+  background-color: rgb(255, 105, 180); 
+}
+
+
 
 /* top button */
 #topBtn {
@@ -342,3 +420,5 @@ footer {
     text-align: center;   
     margin-bottom: -20px;
 }
+
+

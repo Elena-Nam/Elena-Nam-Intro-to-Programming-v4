@@ -35,27 +35,31 @@
             </div> 
         </header>
 
-        <h1> Elena Nam </h1>
-        
         <div class ="ticker">
             <marquee>
             <p><strong> If you can dream it, you can do it </strong></p>
             </marquee>
-        </div>
+        </div> 
 
-        <div class ="container">
+<div class = "grid-container">
+    <div id = "animation" class = "container-a"></div>
+    <div class ="container">
+       
             <div class ="content">
+            <h1> Elena Nam </h1>
+                
             <section id ="about">
                 <h2><em> About: </em></h2> 
-                <p> I am a teacher and learner. I am currently developing my skills on web development.</p>
-                <p></p>
+                <p> I am a teacher and a learner. I am currently developing my skills in web development.</p>
+                
                 <a href="#" class="read-more">continue reading</a>
+                <p class="more-content" style="display: none;"> Although, I am new to this field, I have always been fascinated by technology and the endless possibilities it offers. I have been dedicating my free time to learning HTML, CSS and JavaScript. I am eager to apply my skills in creating functional and visually appealing websites. My goal is to continue learning and growing as a web developer and contribute to exciting projects in the future.</p>
             </section>
     
             <h2><em> Experience: </em></h2>
             <section id = "experience">
                 
-                <button onclick = "myFunction1()">
+                <button onclick = "jobs(`tjx`)">
                     
                     <p> Associate @ TJX </p>
                     <p class = "date"> 3/2024 - present</p> 
@@ -66,7 +70,7 @@
                     <p> Processing and preparing merchandise for the sales floor following company procedures and standards</p>
                     </div>
                 </div>
-                <button onclick = "myFunction2()">
+                <button onclick = "jobs(`miru-mir`)">
                     <p> Teacher @ Miru - Mir </p> 
                     <p class = "date"> 2/2023 - 1/2024 </p>
                 </button>
@@ -76,7 +80,7 @@
                     <p> Utilizing a variety of instructional strategies, resources, and technologies to enhance student understanding and engagement in English.</p>
                     </div>
                 </div>
-                <button onclick = "myFunction3()"> 
+                <button onclick = "jobs(`alter-ego`)"> 
                     <p> Teacher @ Alter Ego </p> 
                     <p class = "date"> 9/2021 - 1/2023 </p>
                 </button>
@@ -86,7 +90,7 @@
                     <p> Assessing student progress regularly through formative and summative assessments, providing timely and constructive feedback to support growth.</p>
                     </div>
                 </div> 
-                <button onclick = "myFunction4()"> 
+                <button onclick = "jobs(`hansung`)"> 
                     <p> Employee @ Hansung </p>
                     <p class = "date"> 2/2016 - 11/2020 </p>
                 </button>
@@ -96,7 +100,7 @@
                     <p> Performing inspections on product forms.</p>
                     </div>
                 </div>
-                <button onclick = "myFunction5()"> 
+                <button onclick = "jobs(`variant-optima`)"> 
                     <p> Manager @  Variant - Optima </p>  
                     <p class = "date"> 4/2012 - 1/2016 </p>
                 </button>
@@ -106,7 +110,7 @@
                     <p> Managing projects, including planning, coordinating with teams, and monitoring profit. Maintaining project documentation and communicate updates effectively.</p>
                     </div>
                 </div>
-                <button onclick = "myFunction6()"> 
+                <button onclick = "jobs(`school`)"> 
                     <p> Teacher @ School 33 </p>   
                     <p class = "date"> 8/2008 - 4/2012 </p>
                 </button>
@@ -140,25 +144,25 @@
             <section id ="leave_a_message">
                 <h2><em> Leave a Message </em></h2>
                 <div class ="container-m">
-                    <!--<form action="action_page.php">-->
-                     <form action="leave_message">
+                
+                    <form action="leave_message">
                     <label for="name"> Name </label>
-                    <input type="text" id="name" name="UsersName" placeholder="Your name..">
+                    <input type="text" id="name" name="usersName" placeholder="Your name.." required>
 
                     <label for="email"> Email </label>
-                    <input type="text" id="email" name="UsersEmail" placeholder="Your email address..">
+                    <input type="text" id="email" name="usersEmail" placeholder="Your email address.." required>
 
                     <label for="message"> Message </label>
-                    <textarea id="message" name="usersMessage" placeholder="Write something.." style="height:200px"></textarea>
+                    <textarea id="message" name="usersMessage" placeholder="Write something.." style="height:200px" required></textarea>
 
-                    <input type="submit" value="Submit">
+                    <button type="submit"> Submit </button> 
                     </form>
                 </div>
             </section>
 
             <section id ="messages">
-                <h2><em> Messages </em></h2>
-                <ul></ul>   
+                <h2><em> Messages: </em></h2>
+                <ul></ul>      
             </section>
 
         </div> <!-- closing div for the class = "content" -->
@@ -177,9 +181,11 @@
                 </section>
             </aside>
 
-        </div> <!-- closing div for the class = "container" -->
+    </div> <!-- closing div for the class = "container" -->
 
-    
+    <div id = "animation_2" class = "container-a"></div>
+
+</div> <!-- closing div for the grid-container -->
     <button class = "btn" onclick="topFunction()" id="topBtn" title="Go to top"><strong> Top </strong></button> 
     </main>  
     
