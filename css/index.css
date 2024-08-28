@@ -162,7 +162,7 @@ header .logo {
    background-repeat: no-repeat;
    background-size: contain;
    background-position: center;
-   animation: move 5s linear 10 ;
+   animation: move 5s linear infinite ;
  } 
  
  @keyframes move {
