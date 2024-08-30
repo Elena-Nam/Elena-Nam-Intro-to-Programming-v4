@@ -210,10 +210,16 @@ aside {
   border: 7px solid rgb(159, 77, 137); 
   border-radius: 5px; 
   margin-bottom: 1em;
+  margin-left:0;
   text-align: center;
- 
+  /*
+  display: flex;
+  flex-direction: column;*/
 }
-
+.sidebar-widget ul {
+  list-style-type: none;
+  padding-left:0;
+}
 
 /* experience section */
 

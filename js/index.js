@@ -235,6 +235,22 @@ function submitFunction(e){
 
 }
 
+// projects section //
 
+const url = "https://api.github.com/users/Elena-Nam/repos";
+fetch(url)
+  .then(response => response.json())
+  .then(repos => {
+  const projectSection = document.getElementById("projects");
+  const projectList = projectSection.querySelector("ul");
+  for (let i = 0; i < repos.length; i++){
+    const project = document.createElement("li");
+   
+    project.innerText = repos[i].name;
+    projectList.appendChild(project);
+   git
+  }
+})
+  .catch((e) => console.log(e));
 
 
