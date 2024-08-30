@@ -193,6 +193,9 @@ content {
 #about {
   border-bottom: rgb(126, 92, 129) 2px solid;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 
@@ -212,9 +215,7 @@ aside {
   margin-bottom: 1em;
   margin-left:0;
   text-align: center;
-  /*
-  display: flex;
-  flex-direction: column;*/
+ 
 }
 .sidebar-widget ul {
   list-style-type: none;
