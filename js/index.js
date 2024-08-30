@@ -11,77 +11,94 @@ function hamburger() {
   } 
 
 
+
+  // About section //
+  document.addEventListener('DOMContentLoaded', function() {
+    const readMoreLink = document.querySelector('.read-more');
+    const moreContent = document.querySelector('.more-content');
+
+    readMoreLink.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        if (moreContent.style.display === 'none') {
+            moreContent.style.display = 'block';
+            readMoreLink.textContent = 'read less'; // Change link text
+        } else {
+            moreContent.style.display = 'none';
+            readMoreLink.textContent = 'continue reading'; // Change link text
+        }
+    });
+});
+
+
+
+  // animation containers //
+    document.addEventListener("mousemove", function (e) {
+      const MAX_FLOWERS = 50;
+      let body = document.querySelector("#animation");
+      let flower = document.createElement("div");
+      flower.classList.add("flower"); 
+      let x = e.offsetX;
+      let y = e.offsetY;
+    
+      flower.style.left = x + "px";
+      flower.style.top = y + "px";
+    
+      let size = Math.random() * 80;
+      flower.style.width = 20 + size + "px";
+      flower.style.height = 20 + size + "px";
+    
+      let rotation = Math.random() * 360;
+      flower.style.transform = `rotate(${rotation}deg)`;
+    
+      body.appendChild(flower);
+
+      if (body.children.length > MAX_FLOWERS) {
+        // Remove the oldest flower to maintain the maximum limit
+        body.firstChild.remove();
+    }
+  })
+
+  document.addEventListener("mousemove", function (e) {
+    const MAX_FLOWERS = 50;
+    let body = document.querySelector("#animation_2");
+    let flower = document.createElement("div");
+    flower.classList.add("flower"); 
+    let x = e.offsetX;
+    let y = e.offsetY;
+  
+    flower.style.left = x + "px";
+    flower.style.top = y + "px";
+  
+    let size = Math.random() * 80;
+    flower.style.width = 20 + size + "px";
+    flower.style.height = 20 + size + "px";
+  
+    let rotation = Math.random() * 360;
+    flower.style.transform = `rotate(${rotation}deg)`;
+  
+    body.appendChild(flower);
+
+    if (body.children.length > MAX_FLOWERS) {
+      
+      body.firstChild.remove();
+  }
+})
+
+
 // Experience section //
 
-function myFunction1() {
-  var x = document.getElementById("tjx");
+function jobs(id) {
+  var x = document.getElementById(id);
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
 } 
-
-function myFunction2() {
-  var x = document.getElementById("miru-mir");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-
-function myFunction3() {
-  var x = document.getElementById("alter-ego");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-
-function myFunction4() {
-  var x = document.getElementById("hansung");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-
-function myFunction5() {
-  var x = document.getElementById("variant-optima");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-
-function myFunction6() {
-  var x = document.getElementById("school");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-
-/*
-function myFunction(element, id) {
-
-  var x = document.getElementById();
-  
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-*/
 
 
 // skills section //
+
 let skills = [
   "HTML",
   "CSS",
@@ -96,17 +113,9 @@ for (let i = 0; i < skills.length; i++){
   console.log(skillList);
 }
 
-/* add some style to each skill */
-const skillStyle = document.getElementsByTagName("li");
-for (let i = 0; i < skillStyle.length; i++) {
-  skillStyle[0].style.cssText = "border-radius: 5px; border-radius: 5px; background: rgb(159, 77, 137); padding: .5em; text-align: center;";
-  skillStyle[1].style.cssText = "border-radius: 5px; border-radius: 5px; background: rgb(159, 77, 137); padding: .5em; text-align: center;";
-  skillStyle[2].style.cssText = "border-radius: 5px; border-radius: 5px; background: rgb(159, 77, 137); padding: .5em; text-align: center;";
-
-}
-
 
 // footer section //
+
 var footerSection = document.createElement("footer");
 document.body.appendChild(footerSection);
 
@@ -117,7 +126,6 @@ var footer = document.querySelector("footer");
 var copyright = document.createElement("p");
 copyright.innerHTML = `Elena Nam  &copy; ${thisYear}`;
 footer.appendChild(copyright);
-
 
 
 // top button //
@@ -142,17 +150,91 @@ function topFunction() {
 
 
 
-/* not finished
-// messages section //
-let messageForm = document.querySelector(`form[name = "leave_message"]`);
-messageForm.addEventListener("submit", submitFunction());
-function submitFunction(){
+// leave a message section //
+
+const messageForm = document.getElementById("leave_a_message");
+messageForm.addEventListener("submit", submitFunction);
+
+function submitFunction(e){
   e.preventDefault();
+  /* get the form fields values */
   const name = e.target.usersName.value;
   const email = e.target.usersEmail.value;
-  const message = e.target.usersMessage.value;
+  const message = e.target.usersMessage.value;;
   console.log(name);
   console.log(email);
   console.log(message);
+
+
+
+// messages section //
+
+  const messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul");
+  const newMessage = document.createElement ("li");
+  newMessage.innerHTML = `<a href = "mailto: ${email}"> ${name}</a>
+  <span class="message-text">${message}</span>`;
+  
+  /* Edit button */
+  const editButton = document.createElement("button");
+  editButton.innerHTML = "Edit";
+  editButton.setAttribute("type", "button");
+  editButton.addEventListener("click", function() {
+
+    /* show the current message text */
+    const messageText = newMessage.querySelector(".message-text");
+    const currentMessage = messageText.textContent;
+
+    /* Remove the edit button */
+    newMessage.removeChild(editButton);
+
+    /* Create a new input field for editing */
+      const editInput = document.createElement("input");
+      editInput.type = "text";
+      editInput.value = currentMessage;
+      newMessage.appendChild(editInput);
+
+  /* Save button */
+  const saveButton = document.createElement("button");
+  saveButton.innerHTML = "Save";
+  saveButton.setAttribute("type", "button");
+
+  saveButton.addEventListener("click", function() {
+    const newMessageText = editInput.value;
+    messageText.textContent = newMessageText;
+
+    /* Remove input and save button */
+    newMessage.removeChild(editInput);
+    newMessage.removeChild(saveButton);
+
+    /* Re-add edit button */
+      newMessage.appendChild(editButton);
+      });
+      newMessage.appendChild(saveButton);
+  
+  });
+  
+  
+  /* Remove button */
+  const removeButton = document.createElement("button");
+  removeButton.innerHTML = "Remove";
+  removeButton.setAttribute("type", "button");
+  removeButton.addEventListener("click", function() {
+      messageList.removeChild(newMessage);
+  });
+  
+  /* Append buttons to the new message item */
+  newMessage.appendChild(editButton);
+  newMessage.appendChild(removeButton);
+  
+  /* Append new message item to the list */
+  messageList.appendChild(newMessage);
+
+  /* Reset form fields after submission */
+  e.target.reset();
+
 }
-*/
+
+
+
+
