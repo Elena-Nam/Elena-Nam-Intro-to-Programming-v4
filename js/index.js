@@ -94,8 +94,12 @@ function jobs(id) {
   } else {
     x.style.display = "none";
   }
+ 
 } 
-
+ /* how to disable the button when the page is refreshed? 
+window.onload = function() {
+  document.getElementById("jobs").disabled = true;
+*/
 
 // skills section //
 
@@ -246,10 +250,25 @@ fetch(url)
   for (let i = 0; i < repos.length; i++){
     const project = document.createElement("li");
    
-    project.innerText = repos[i].name;
+    project.innerHTML += `<a href = "${repos[i].html_url}" target="_blank"> ${repos[i].name}  <br> <img src = "images/${repos[i].name}.png"></a>`;
     projectList.appendChild(project);
-   git
-  }
+  
+
+    const lastProject = document.getElementById("last_project");
+    const lastRepo = repos[repos.length - 1];
+    const lastRepoLink = document.createElement("p");
+    const myNewProject = document.createElement("h3");
+    const lastRepoParagraph = document.createElement("p");
+
+    myNewProject.innerText = `My new project`;
+    lastRepoLink.innerHTML += `<a href = "${lastRepo.html_url}" target="_blank"> ${lastRepo.name}  <br> <img src = "images/${lastRepo.name}.png"></a>`;
+
+    lastRepoParagraph.appendChild(myNewProject);
+    lastRepoParagraph.appendChild(lastRepoLink);
+    lastProject.innerHTML = ''; // Clear previous content
+    lastProject.appendChild(lastRepoParagraph);
+    }
+
 })
   .catch((e) => console.log(e));
 

@@ -47,7 +47,6 @@ h3 {
   color: rgb(159, 77, 137); 
   font-weight: 600;
   text-decoration: none;
- 
   }
 
 .read-more:hover {
@@ -148,7 +147,7 @@ header .logo {
   position: relative;
    width: 1fr;  
    height: 100%; 
-   margin: 1em;
+   margin: 2em;
    overflow: hidden; 
    pointer-events: none;
  }
@@ -180,14 +179,13 @@ header .logo {
 .container {
   width: 100%;
   max-width: 900px;
-  margin: 0 3em;
-  margin-right: 0;
+  margin: 0 1em;
   display: flex;
   justify-content: space-between;
 }
 
 content {
-  width: 75%;
+  width: 70%;
 }
 
 #about {
@@ -199,14 +197,30 @@ content {
 }
 
 
-/*projects section*/
+/* projects section*/
+#projects {
+   img {
+    width: 50%;
+}
+
+ h3 {
+  padding: 0;
+  margin: 0;
+}
+}
 
 aside {
-  width: 25%;
+  width: 30%;
   min-width: 250px;
   display: flex;
   margin-left: 2em;
   justify-content: center;
+  padding: 0;
+  h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 0;
+  }
 }
 
 .sidebar-widget {
@@ -214,13 +228,19 @@ aside {
   border-radius: 5px; 
   margin-bottom: 1em;
   margin-left:0;
+  margin-top: 0;
   text-align: center;
- 
 }
-.sidebar-widget ul {
-  list-style-type: none;
-  padding-left:0;
+
+#all_projects {
+  ul {list-style-type: none;
+  padding-left: 0;
+  }
+  li {
+  border-bottom: rgb(126, 92, 129) 2px solid;
+  }
 }
+
 
 /* experience section */
 
@@ -376,6 +396,11 @@ button[type=submit]:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-bottom: rgb(126, 92, 129) 2px solid;
+}
+#messages li{
+  display: grid;
+  grid-template-columns: 1fr 3fr .5fr .5fr;
 }
 
 /* styles for edit, save and remove buttons */
