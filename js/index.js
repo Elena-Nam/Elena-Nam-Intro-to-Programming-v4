@@ -94,8 +94,12 @@ function jobs(id) {
   } else {
     x.style.display = "none";
   }
+ 
 } 
-
+ /* how to disable the button when the page is refreshed? 
+window.onload = function() {
+  document.getElementById("jobs").disabled = true;
+*/
 
 // skills section //
 
@@ -235,6 +239,37 @@ function submitFunction(e){
 
 }
 
+// projects section //
 
+const url = "https://api.github.com/users/Elena-Nam/repos";
+fetch(url)
+  .then(response => response.json())
+  .then(repos => {
+  const projectSection = document.getElementById("projects");
+  const projectList = projectSection.querySelector("ul");
+  for (let i = 0; i < repos.length; i++){
+    const project = document.createElement("li");
+   
+    project.innerHTML += `<a href = "${repos[i].html_url}" target="_blank"> ${repos[i].name}  <br> <img src = "images/${repos[i].name}.png"></a>`;
+    projectList.appendChild(project);
+  
+
+    const lastProject = document.getElementById("last_project");
+    const lastRepo = repos[repos.length - 1];
+    const lastRepoLink = document.createElement("p");
+    const myNewProject = document.createElement("h3");
+    const lastRepoParagraph = document.createElement("p");
+
+    myNewProject.innerText = `My new project`;
+    lastRepoLink.innerHTML += `<a href = "${lastRepo.html_url}" target="_blank"> ${lastRepo.name}  <br> <img src = "images/${lastRepo.name}.png"></a>`;
+
+    lastRepoParagraph.appendChild(myNewProject);
+    lastRepoParagraph.appendChild(lastRepoLink);
+    lastProject.innerHTML = ''; // Clear previous content
+    lastProject.appendChild(lastRepoParagraph);
+    }
+
+})
+  .catch((e) => console.log(e));
 
 
