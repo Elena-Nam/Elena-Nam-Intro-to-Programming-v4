@@ -33,7 +33,7 @@ function hamburger() {
 
   // animation containers //
     document.addEventListener("mousemove", function (e) {
-      const MAX_FLOWERS = 50;
+      const MAX_FLOWERS = 20;
       let body = document.querySelector("#animation");
       let flower = document.createElement("div");
       flower.classList.add("flower"); 
@@ -59,7 +59,7 @@ function hamburger() {
   })
 
   document.addEventListener("mousemove", function (e) {
-    const MAX_FLOWERS = 50;
+    const MAX_FLOWERS = 20;
     let body = document.querySelector("#animation_2");
     let flower = document.createElement("div");
     flower.classList.add("flower"); 
@@ -196,6 +196,7 @@ function submitFunction(e){
       const editInput = document.createElement("input");
       editInput.type = "text";
       editInput.value = currentMessage;
+      editInput.classList.add("edit-input"); // Apply the CSS class
       newMessage.appendChild(editInput);
 
   /* Save button */

@@ -35,6 +35,7 @@ h2 {
   font-size: 1.5rem;
   font-weight: bold; 
   margin-left: 10px;
+  padding-bottom: 1em;
 }
 
 h3 {
@@ -107,6 +108,7 @@ letter-spacing: 1.2px;
 header {
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 
@@ -150,6 +152,7 @@ header .logo {
    margin: 2em;
    overflow: hidden; 
    pointer-events: none;
+   z-index: 1;
  }
  
  .flower::before {
@@ -190,12 +193,13 @@ content {
 
 #about {
   border-bottom: rgb(126, 92, 129) 2px solid;
-  padding: 1em;
   display: flex;
   flex-direction: column;
-  
+  padding: 1em;
+  h2 {
+  padding-top: 1em;
+ }
 }
-
 
 /* projects section*/
 #projects {
@@ -207,6 +211,7 @@ content {
   padding: 0;
   margin: 0;
 }
+padding-top: 2em;
 }
 
 aside {
@@ -247,6 +252,7 @@ aside {
 #experience {
   border-bottom: rgb(126, 92, 129) 2px solid;
   padding-bottom: 1em;
+  padding-top: 2em;
 }
 
 #experience div {
@@ -291,7 +297,8 @@ aside {
 
 #skills {
   border-bottom: rgb(126, 92, 129) 2px solid;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
+  padding-top: 2em;
 }
 
 #skills ul {
@@ -317,6 +324,7 @@ aside {
 #connect {
   border-bottom: rgb(126, 92, 129) 2px solid;
   padding-bottom: 1em;
+  padding-top: 2em;
 }
 
 #connect ul {
@@ -349,6 +357,10 @@ section .container-m {
   max-width: 1200px;
   margin-bottom: 30px;
   margin-left: 30px;
+  padding-top: 2em;
+  h2{
+    margin-left: -1.5em;
+  }
 }
 
 input[type=text], select, textarea {
@@ -372,7 +384,6 @@ input[type=text], select, textarea {
   font-weight: 700;
   letter-spacing: 1px;
   padding: 10px;
-  /*border: none;*/
   border-radius: 50%;
   margin-bottom: 10px;
   cursor: pointer;
@@ -400,7 +411,7 @@ button[type=submit]:hover {
 }
 #messages li{
   display: grid;
-  grid-template-columns: 1fr 3fr .5fr .5fr;
+  grid-template-columns: 2fr 5fr 1fr 5fr 1fr;
 }
 
 /* styles for edit, save and remove buttons */
@@ -408,7 +419,7 @@ button[type=button]{
   background-color: rgb(159, 77, 137); 
   letter-spacing: 1px; 
   border-radius: 5px; 
-  margin: 0 3em;
+  margin: 0 1em;
   margin-bottom: 2em;
   width: 5em;
   cursor: pointer;
