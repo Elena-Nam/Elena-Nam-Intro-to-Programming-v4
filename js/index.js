@@ -9,7 +9,13 @@ function hamburger() {
     x.className = "topnav";
   }
   } 
-
+  /* Close the hamburger menu when a link is clicked */
+    document.querySelectorAll('#myNav a:not(.icon)').forEach(link => {
+      link.addEventListener('click', function() {
+          var x = document.getElementById("myNav");
+          x.className = "topnav";
+      });
+  });
 
 
   // About section //
@@ -96,10 +102,21 @@ function jobs(id) {
   }
  
 } 
- /* how to disable the button when the page is refreshed? 
+ /* how to disable the buttons of cards in experience section when the page is refreshed? 
+window.onload = function refreshPage() {
+  document.getElementsByClassName("card").disabled = true;
+}
+  */
+/*
 window.onload = function() {
-  document.getElementById("jobs").disabled = true;
-*/
+  var cards = document.getElementsByClassName("card");
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].disabled = true;
+  }
+}
+  */
+
+
 
 // skills section //
 
