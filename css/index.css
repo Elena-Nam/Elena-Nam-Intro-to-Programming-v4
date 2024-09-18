@@ -204,15 +204,20 @@ content {
 
 /* projects section*/
 #projects {
-   img {
-    width: 50%;
-}
-
- h3 {
+  h3 {
   padding: 0;
   margin: 0;
 }
 padding-top: 2em;
+}
+
+#projects img {
+   width: 50%;
+   transition: transform 0.3s ease;
+}
+
+#projects img:hover {
+  transform: scale(1.5); 
 }
 
 aside {
