@@ -102,12 +102,14 @@ function jobs(id) {
   }
  
 } 
- /* how to disable the buttons of cards in experience section when the page is refreshed? 
+
+/*how .card class ensures that the details are hidden when the page first loads?*/
+ /* or how to disable the buttons of cards in experience section when the page is refreshed? 
 window.onload = function refreshPage() {
   document.getElementsByClassName("card").disabled = true;
 }
   */
-/*
+/* or 
 window.onload = function() {
   var cards = document.getElementsByClassName("card");
   for (var i = 0; i < cards.length; i++) {

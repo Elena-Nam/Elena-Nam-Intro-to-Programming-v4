@@ -1,384 +1,183 @@
-/* for mobile phones */
-/*
-@media (max-width: 599px){
+/* for mobile phones and tablets */
+@media (max-width: 850px)  {
     body {
-    font-size: 1.3rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-       padding-top: 2em;
-       padding-bottom: 0;
-      }
-
-    /* navigation */
-   /* .container-nav {
-         flex-direction: column;  
+    font-size: 1.25rem; 
     }
     
     .container-nav a:hover {
     background-color: rgb(255, 105, 180); 
-    color: rgb(113, 55, 98);
+    color: black;
     }
-        
+
+    .ticker {
+    width: 90%;
+    margin-left: 10px; 
+    margin-bottom: 0;
+    }
+
+    .container {
+    flex-direction: column;
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 100%; /* Make the container narrower */
+    }
+
+    .container-a {
+    display: none; 
+    }
+
+    #about h2 {
+    margin-bottom: 0; 
+    }
+
+    #experience {
+    margin-left: 1em;
+    }
+
+    #experience button {
+    width: 100%; 
+    font-size: 1rem;
+    }
+
+    #experience .card {
+    width: 100%;
+    font-size: 1.2rem;
+    border: 4px solid rgb(200, 154, 203);
+    }
+
+    #skills ul {
+    gap: .5em;
+    width: 40%;
+    }
+
+    aside {
+    width: 70%;
+    justify-content: center;
+    margin-left: 0;
+    padding-left: 1.5em;
+    }
+
+    #connect ul {
+    flex-direction: column;
+    gap: 5px;
+    }
+
+    section .container-m {
+    margin-right: 1em;
+    width: 80%;
+    }
+
+    #leave_a_message {
+    margin: 0;
+    margin-right: 2em;
+    border-bottom: rgb(126, 92, 129) 2px solid;
+    padding-bottom: 2em;
+    }
+
+    #leave_a_message h2 {
+    margin-left: 0;
+    }
+
+    #messages li {
+    grid-template-columns: 1fr;
+    }
+
+    #topBtn {
+    transform: translateX(-220%);
+    }
+}
+
+/* Specific styles for mobile phones (600px) */
+
+@media (max-width: 600px){
+    body {
+    font-size: 1.3rem;
+    }
+    
+    h1 {
+    font-size: 2.5rem;
+    }
+    
+    h2 {
+    padding-top: 2em;
+    padding-bottom: 0;
+    }
+    
+    /* navigation */
+    .container-nav {
+    flex-direction: column;  
+    }
+            
     .container-nav a:not(:first-child) {display: none;}
     .container-nav a.icon {
     float: right;
     display: block;
     }
-
+    
     .container-nav .responsive {position: relative;}
     .container-nav .responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     }
-
+    
     .container-nav .responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    
-   
-    .ticker {
-        width: 90%;
-        margin-left: 10px; 
-        margin-bottom: 0;
-    }
-    
-
-    /* main content */
-   /* .container {
-        flex-direction: column;
-        margin-left: 1em;
-        margin-right: 1em;  
-       
-    }
-   
-   
-
-    // animation section hidden //
-    .container-a {
-        display: none;
-    }
-   
-
-    // about section //
-    #about {
-        h2 {
-            margin-bottom: 0;        
-        }
-    }
-
-    // experience section //
-    #experience {
-        margin-left: 1em;
-    }
-
-    #experience button {
-        width: 100%;
-        font-size: 1rem;  
-    }
-
-    #experience .card {
-        width: 100%;
-        font-size: 1.2rem;
-        border: 4px solid rgb(200, 154, 203);
-    }
-
-
-    // skills section //
-    #skills ul {
-        flex-direction: column;
-        gap: .5em; 
-        width: 40%;   
-    }
-
-
-    // projects section //
-    aside {
-        width: 100%; 
-        justify-content: center;
-        margin-left: 0;
-        padding-left: .5em;
-    }
-
-
-    // connect section //
-    #connect ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-
-    // leave a message section //
-    section .container-m {
-        margin-right: 1em;
-        width: 80%;
-    }
-
-    #leave_a_message {
-        margin: 0;
-        margin-right: 2em;
-        border-bottom: rgb(126, 92, 129) 2px solid;
-        padding-bottom: 2em;
-       
-        h2 {
-            margin-left: 0;
-          }
-        
-    }
-
-    #messages li{
-        grid-template-columns: 1fr;
-      }
-  
-
-    // top button//
-    #topBtn {
-        transform: translateX(-220%);
-    }   
-
-} 
-*/
-
-
-/* for tablets */
-/*
-@media (min-width: 600px) and (max-width: 850px) {
-
-    body {
-        font-size: 1.25rem;
-    }
-    .container-nav {
-        height: 3em;
-    } 
-
-   .logo {
-        display: none;
-    }
-
-    .ticker {
-        width: 90%;
-        margin-left: 10px; 
-        margin-bottom: 0;
-    }
-
-
-     // animation section hidden //
-    .container-a {
-        display: none;
-    }
-
-
-    // main content //
-    .container {
-        flex-direction: column;
-        margin-left: 2em;
-        margin-right: 2em;    
-    }
-
-    
-    // experience section //
-    #experience button {
-        width: 80%;
-    }
-
-    #experience .card {
-        font-size: 1.2rem;
-        width: 80%;
-    }
-
-    #skills ul {
-        gap: 2em;
-        
-      }
-
-
-     // projects section //
-    aside {
-        width: 70%; 
-        justify-content: center;
-    }
-
-
-    // connect section //   
-    #connect ul {
-        gap: 50px;
-        a:hover {
-            color: rgb(255, 105, 180);
-        }
-    }
-
-    
-    // leave a message section //
-    section .container-m {
-        width: 70%;
-    }
-
-    #leave_a_message {
-        margin: 0;
-        h2 {
-            margin-left: -10px;
-          }
-    }
-
-}
-*/
-
-@media (max-width: 850px) {
-    body {
-        font-size: 1.25rem; 
-    }
-
-    .container-nav {
-        height: 3em;
-        flex-direction: column;
-    }
-
-    .container-nav a:hover {
-        background-color: rgb(255, 105, 180);
-        color: rgb(113, 55, 98);
-    }
-
-    .container-nav a:not(:first-child) {
-        display: none;
-    }
-
-    .container-nav a.icon {
-        float: right;
-        display: block;
-    }
-
-    .container-nav .responsive {
-        position: relative;
-    }
-
-    .container-nav .responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .container-nav .responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .ticker {
-        width: 90%;
-        margin-left: 10px;
-        margin-bottom: 0;
+    float: none;
+    display: block;
+    text-align: left;
     }
 
     .container {
-        flex-direction: column;
-        margin-left: 1em;
-        margin-right: 1em;
-    }
-
-    .container-a {
-        display: none; /* Hidden on both tablets and mobiles */
-    }
-
-    #about h2 {
-        margin-bottom: 0; /* Common for both */
-    }
-
-    #experience {
-        margin-left: 1em;
-    }
-
-    #experience button {
-        width: 100%; /* Adjust based on the smallest screen size */
-        font-size: 1rem;
-    }
-
-    #experience .card {
-        width: 100%;
-        font-size: 1.2rem;
-        border: 4px solid rgb(200, 154, 203);
+    width: 100%; 
     }
 
     #skills ul {
-        flex-direction: column;
-        gap: .5em;
-        width: 40%;
-    }
-
-    aside {
-        width: 100%;
-        justify-content: center;
-        margin-left: 0;
-        padding-left: .5em;
-    }
-
-    #connect ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    section .container-m {
-        margin-right: 1em;
-        width: 80%;
-    }
-
-    #leave_a_message {
-        margin: 0;
-        margin-right: 2em;
-        border-bottom: rgb(126, 92, 129) 2px solid;
-        padding-bottom: 2em;
-    }
-
-    #leave_a_message h2 {
-        margin-left: 0;
-    }
-
-    #messages li {
-        grid-template-columns: 1fr;
-    }
-
-    #topBtn {
-        transform: translateX(-220%);
+    flex-direction: column;
     }
 }
 
 /* Specific styles for tablets (600px to 850px) */
 @media (min-width: 600px) and (max-width: 850px) {
     body {
-        font-size: 1.25rem; /* If different from mobile */
+    font-size: 1.25rem; 
+    }
+
+    .container-nav {
+    height: 3em;
     }
 
     .logo {
-        display: none; /* Tablet-specific */
+    display: none; 
     }
 
     #experience button {
-        width: 80%;
+    width: 80%;
     }
 
     #experience .card {
-        width: 80%;
+    width: 80%;
     }
 
     #skills ul {
-        gap: 2em;
+    gap: 2em;
+    width: 80%;
     }
 
     aside {
-        width: 70%;
+    width: 70%;
     }
 
     #connect ul {
-        gap: 50px;
+    gap: 5em;
+    flex-direction: row;
+    }
+
+    section .container-m {
+    width: 70%;
     }
 
     #leave_a_message h2 {
-        margin-left: -10px;
+    margin-left: -20px;
     }
+ 
 }

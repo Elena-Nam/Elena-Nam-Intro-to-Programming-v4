@@ -185,6 +185,7 @@ header .logo {
   margin: 0 1em;
   display: flex;
   justify-content: space-between;
+ 
 }
 
 content {
@@ -289,7 +290,7 @@ aside {
   margin-left: 0px; 
   padding: 0 15px;
   font-size: 1rem; 
- 
+  
 }
 
 
