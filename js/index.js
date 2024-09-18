@@ -9,7 +9,13 @@ function hamburger() {
     x.className = "topnav";
   }
   } 
-
+  /* Close the hamburger menu when a link is clicked */
+    document.querySelectorAll('#myNav a:not(.icon)').forEach(link => {
+      link.addEventListener('click', function() {
+          var x = document.getElementById("myNav");
+          x.className = "topnav";
+      });
+  });
 
 
   // About section //
@@ -33,7 +39,7 @@ function hamburger() {
 
   // animation containers //
     document.addEventListener("mousemove", function (e) {
-      const MAX_FLOWERS = 50;
+      const MAX_FLOWERS = 20;
       let body = document.querySelector("#animation");
       let flower = document.createElement("div");
       flower.classList.add("flower"); 
@@ -59,7 +65,7 @@ function hamburger() {
   })
 
   document.addEventListener("mousemove", function (e) {
-    const MAX_FLOWERS = 50;
+    const MAX_FLOWERS = 20;
     let body = document.querySelector("#animation_2");
     let flower = document.createElement("div");
     flower.classList.add("flower"); 
@@ -96,10 +102,23 @@ function jobs(id) {
   }
  
 } 
- /* how to disable the button when the page is refreshed? 
+
+/*how .card class ensures that the details are hidden when the page first loads?*/
+ /* or how to disable the buttons of cards in experience section when the page is refreshed? 
+window.onload = function refreshPage() {
+  document.getElementsByClassName("card").disabled = true;
+}
+  */
+/* or 
 window.onload = function() {
-  document.getElementById("jobs").disabled = true;
-*/
+  var cards = document.getElementsByClassName("card");
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].disabled = true;
+  }
+}
+  */
+
+
 
 // skills section //
 
@@ -196,6 +215,7 @@ function submitFunction(e){
       const editInput = document.createElement("input");
       editInput.type = "text";
       editInput.value = currentMessage;
+      editInput.classList.add("edit-input"); // Apply the CSS class
       newMessage.appendChild(editInput);
 
   /* Save button */
