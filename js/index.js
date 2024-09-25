@@ -9,31 +9,31 @@ function hamburger() {
     x.className = "topnav";
   }
   } 
-
+  /* Close the hamburger menu when a link is clicked */
+    document.querySelectorAll('#myNav a:not(.icon)').forEach(link => {
+      link.addEventListener('click', function() {
+          var x = document.getElementById("myNav");
+          x.className = "topnav";
+      });
+  });
 
 
   // About section //
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const readMoreLink = document.querySelector('.read-more');
     const moreContent = document.querySelector('.more-content');
-
-    readMoreLink.addEventListener('click', function(e) {
-        e.preventDefault(); 
-        if (moreContent.style.display === 'none') {
-            moreContent.style.display = 'block';
-            readMoreLink.textContent = 'read less'; // Change link text
-        } else {
-            moreContent.style.display = 'none';
-            readMoreLink.textContent = 'continue reading'; // Change link text
-        }
-    });
+   
+document.querySelector('.read-more').addEventListener('click', function(event) {
+  event.preventDefault();
+  const moreContent = document.querySelector('.more-content');
+  moreContent.style.display = 'block'; // Show the hidden content
+  this.style.display = 'none'; // Hide the "continue reading" button
 });
-
-
+});
 
   // animation containers //
     document.addEventListener("mousemove", function (e) {
-      const MAX_FLOWERS = 50;
+      const MAX_FLOWERS = 10;
       let body = document.querySelector("#animation");
       let flower = document.createElement("div");
       flower.classList.add("flower"); 
@@ -59,7 +59,7 @@ function hamburger() {
   })
 
   document.addEventListener("mousemove", function (e) {
-    const MAX_FLOWERS = 50;
+    const MAX_FLOWERS = 10;
     let body = document.querySelector("#animation_2");
     let flower = document.createElement("div");
     flower.classList.add("flower"); 
@@ -96,10 +96,7 @@ function jobs(id) {
   }
  
 } 
- /* how to disable the button when the page is refreshed? 
-window.onload = function() {
-  document.getElementById("jobs").disabled = true;
-*/
+
 
 // skills section //
 
@@ -114,8 +111,9 @@ for (let i = 0; i < skills.length; i++){
   const skill = document.createElement("li");
   skill.innerHTML = skills[i];
   skillList.appendChild(skill);
-  console.log(skillList);
 }
+  console.log(skillList); // skill list is console logged once //
+
 
 
 // footer section //
@@ -196,6 +194,7 @@ function submitFunction(e){
       const editInput = document.createElement("input");
       editInput.type = "text";
       editInput.value = currentMessage;
+      editInput.classList.add("edit-input"); // Apply the CSS class
       newMessage.appendChild(editInput);
 
   /* Save button */
