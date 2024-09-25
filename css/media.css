@@ -126,7 +126,15 @@
     display: block;
     text-align: left;
     }
+    
+    .logo-container {
+    justify-content: center;
+    }
 
+    header .logo {
+    width: 50%; 
+    }
+    
     .container {
     width: 100%; 
     }
@@ -146,7 +154,7 @@
     height: 3em;
     }
 
-    .logo {
+   .logo-container {
     display: none; 
     }
 

@@ -19,27 +19,21 @@ function hamburger() {
 
 
   // About section //
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const readMoreLink = document.querySelector('.read-more');
     const moreContent = document.querySelector('.more-content');
-
-    readMoreLink.addEventListener('click', function(e) {
-        e.preventDefault(); 
-        if (moreContent.style.display === 'none') {
-            moreContent.style.display = 'block';
-            readMoreLink.textContent = 'read less'; // Change link text
-        } else {
-            moreContent.style.display = 'none';
-            readMoreLink.textContent = 'continue reading'; // Change link text
-        }
-    });
+   
+document.querySelector('.read-more').addEventListener('click', function(event) {
+  event.preventDefault();
+  const moreContent = document.querySelector('.more-content');
+  moreContent.style.display = 'block'; // Show the hidden content
+  this.style.display = 'none'; // Hide the "continue reading" button
 });
-
-
+});
 
   // animation containers //
     document.addEventListener("mousemove", function (e) {
-      const MAX_FLOWERS = 20;
+      const MAX_FLOWERS = 10;
       let body = document.querySelector("#animation");
       let flower = document.createElement("div");
       flower.classList.add("flower"); 
@@ -65,7 +59,7 @@ function hamburger() {
   })
 
   document.addEventListener("mousemove", function (e) {
-    const MAX_FLOWERS = 20;
+    const MAX_FLOWERS = 10;
     let body = document.querySelector("#animation_2");
     let flower = document.createElement("div");
     flower.classList.add("flower"); 
@@ -103,22 +97,6 @@ function jobs(id) {
  
 } 
 
-/*how .card class ensures that the details are hidden when the page first loads?*/
- /* or how to disable the buttons of cards in experience section when the page is refreshed? 
-window.onload = function refreshPage() {
-  document.getElementsByClassName("card").disabled = true;
-}
-  */
-/* or 
-window.onload = function() {
-  var cards = document.getElementsByClassName("card");
-  for (var i = 0; i < cards.length; i++) {
-    cards[i].disabled = true;
-  }
-}
-  */
-
-
 
 // skills section //
 
@@ -133,8 +111,9 @@ for (let i = 0; i < skills.length; i++){
   const skill = document.createElement("li");
   skill.innerHTML = skills[i];
   skillList.appendChild(skill);
-  console.log(skillList);
 }
+  console.log(skillList); // skill list is console logged once //
+
 
 
 // footer section //
